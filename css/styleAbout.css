@@ -1,0 +1,251 @@
+.fixedbackground {
+  width: 100%;
+  height: 32%;
+  background-color: #white;
+  background-image: url("../img/om-mig-pic.png");
+  background-repeat: no-repeat;
+  background-position: 10%;
+  background-size: contain;
+  display: flex;
+  position: fixed;
+  z-index: -1;
+}
+
+.flexwrapper {
+  display: flex;
+  position: relative;
+  margin-top: 100px;
+  padding: 0 20px;
+}
+
+.flexBox1 {
+  font-family: Oswald, helvetica, sans-serif;
+  width: 35%;
+  height: 50%;
+  color: #DCBA19;
+  padding: 10px;
+  margin-top: 100px;
+}
+
+.flexBox2 {
+  font-family: Oswald, helvetica, sans-serif;
+  width: 65%;
+  padding: 10px;
+  margin-top: 100px;
+}
+
+.flexBox2 h1 {
+  color: #DCBA19;
+  border-bottom: 1px solid #DCBA19;
+  width: 70%;
+  text-shadow: 2px 2px 2px black;
+}
+
+
+.flexBox2 h2 {
+  font-weight: 200;
+  font-size: 14px;
+  color: white;
+}
+
+/*
+.borderBox11 {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  bottom: 0%;
+}
+*/
+
+.kompetencer {
+  margin-top: 50px;
+  font-family: Oswald, helvetica, sans-serif;
+}
+
+.kompetencer h1 {
+  color: #DCBA19;
+  text-align: center;
+  padding: 20px;
+}
+
+.kompTitle {
+  font-size: 40px;
+  margin: auto;
+  text-decoration: underline;
+}
+
+.aboutFlexContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.kompetenceIkonContainer {
+  flex: 20%;
+  margin: 20px;
+  padding: 30px;
+  color: white;
+  background: rgba(18, 76, 98, 0.7);
+  border-radius: 100px;
+  transition: .3s ease-out;
+}
+
+.kompetenceIkonContainer:hover {
+  background: rgba(18, 76, 98, 1);
+}
+
+.kompetenceIkon {
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+
+.kompetenceIkon img {
+  width: 100%;
+}
+
+.kompetenceIkonContainer p {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+/* Kontakt sektion */
+
+.contactContainer {
+  width: 88%;
+  height: 100%;
+  padding: 40px;
+  margin: auto;
+  margin-top: 22px;
+  background-color: #D9524D;
+  border-radius: 100px;
+  font-family: Oswald, helvetica, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.contactContainer h1 {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.contactContainer h1 p {
+  color: #DCBA19;
+  text-decoration: underline;
+}
+
+.contactBox {
+  margin: 20px;
+  border-radius: 450px;
+  margin: auto;
+}
+
+.contactBox p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.contactLines {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contactLines img {
+  height: 30px;
+  margin: 10px;
+
+}
+
+.contactLines p {
+  margin: 10px;
+  color: white;
+}
+
+.contactLines a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  transition: text-decoration 0.6s ease-out;
+}
+
+.contactLines a:hover {
+  text-decoration: underline;
+}
+
+
+@media only screen and (min-device-width: 668px) and (max-device-height: 1223px) {
+  .fixedbackground {
+    height: 60%;
+  }
+
+  .flexBox1 {
+    width: 30%;
+  }
+
+  .flexBox2 {
+    padding: 0 80px;
+    width: 70%;
+  }
+
+  .flexBox2 h2 {
+    font-size: 18px;
+  }
+
+  .contactContainer {
+    width: 40%;
+  }
+
+  .kompetenceIkonContainer p {
+    font-size: 23px;
+  }
+
+}
+
+@media only screen and (min-device-width: 1224px) {
+  .fixedbackground {
+    height: 100%;
+  }
+
+  .flexBox1 {
+    width: 45%;
+  }
+
+  .flexBox2 {
+    padding: 0 150px;
+    width: 65%;
+  }
+
+  .flexBox2 h1 {
+    width: 40%;
+  }
+
+  .flexBox2 h2 {
+    font-size: 22px;
+  }
+
+  .contactContainer {
+    width: 100%;
+    border-radius: 0px;
+    background: rgba(217, 82, 77, 0.7);
+    transition: 0.3s ease-out;
+  }
+
+  .contactContainer:hover {
+    background: rgba(217, 82, 77, 1);
+  }
+
+  .kompetenceIkonContainer p {
+    font-size: 25px;
+  }
+
+  .kompTitle {
+      text-shadow: 2px 2px 2px black;
+  }
+
+}

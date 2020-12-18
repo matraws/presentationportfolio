@@ -1,0 +1,915 @@
+* {
+  box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
+   box-sizing: border-box;
+}
+
+body {
+  background-color: #32302c;
+  z-index: 1;
+}
+
+.mainContent {
+  display: flex;
+  padding: 10px;
+  position: relative;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+section {
+  display: block;
+}
+
+/* Header */
+
+header {
+  background-image: url("../img/headerbg.png");
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+}
+
+.matrawsLogo {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+header ul p {
+  color: white;
+  padding: 20px;
+  display: none;
+}
+
+/* Header - slut */
+
+/* Drop-down Burger-menu */
+
+.header {
+  font-family: Oswald, helvetica, sans-serif;
+  text-align: center;
+}
+
+.header ul a {
+  color: #32302c;
+  display: block;
+  outline: 1px solid #32302c;
+  padding: 20px;
+  text-decoration: none;
+  position: relative;
+  transition: .2s ease-out;
+}
+
+.header ul a:hover {
+  background-color: #32302c;
+  color: #ffffff;
+  border-left: 15px solid #124C62;
+  position: relative;
+}
+
+.header ul {
+  list-style: none;
+  overflow: hidden;
+  background-color: #ffffff;
+  width: 100%;
+  margin: auto;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .8s cubic-bezier(0.33, 1, 0.68, 1);
+  margin-top: 100px;
+}
+
+.header .menuIcon {
+  padding: 20px 10px;;
+  position: relative;
+  cursor: pointer;
+  float: right;
+}
+
+.header .menuIcon .navIcon {
+  background-color: #ffffff;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background .2s ease-out;
+}
+
+.header .menuIcon .navIcon:before {
+  background: #ffffff;
+  content:"";
+  display:block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  top: 5px;
+}
+
+.header .menuIcon .navIcon:after {
+  background: #ffffff;
+  content:"";
+  display:block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  top: -5px;
+}
+
+.header .menuButton {
+  display: none;
+}
+
+.header .menuButton:checked ~ .menu {
+  max-height: 350px;
+}
+
+.header .menuButton:checked ~ .menuIcon .navIcon {
+  background-color: transparent;
+}
+
+.header .menuButton:checked ~ .menuIcon .navIcon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menuButton:checked ~ .menuIcon .navIcon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.header .menuButton:checked ~ .mainContent {
+  margin-top: 550px;
+}
+
+/* Drop-down Burger-menu - slut */
+
+/* About*/
+
+.about {
+  height: 150px;
+  flex: 1;
+  font-family: Oswald, helvetica, sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 45px;
+}
+
+.borderContainer {
+  max-width: 80%;
+  min-width: 288px;
+  margin: auto;
+  padding: 20px 50px;
+  position: relative;
+}
+
+.borderContainer h1 {
+  color: #DCBA19;
+  font-weight: 400;
+  font-size: 45px;
+}
+
+.borderContainer h2 {
+  font-weight: 200;
+  font-size: 25px;
+}
+
+.borderBox1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  top: 0;
+  right: 0;
+}
+
+.borderBox2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  bottom: 0;
+  left: 0;
+}
+
+/* About - slut */
+
+/* CATEGORY */
+
+.catContainer {
+  margin-top: 50px;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cat {
+  text-align: center;
+  margin: 40px 40px;
+}
+
+.cat:hover .imgvid {
+  transform: scale(1.1);
+}
+
+.cat p {
+  margin-bottom: 20px;
+}
+
+.imgvid {
+  height: 350px;
+  display: block;
+  transition: transform 550ms ease;
+  margin: auto;
+}
+
+.borderBox3 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  top: 6%;
+  right: 6%;
+}
+
+.borderBox4 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  bottom: 0;
+  left: 6%;
+}
+
+.borderBox5 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  top: 6%;
+  right: 6%;
+}
+
+.borderBox6 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  bottom: 0;
+  left: 6%;
+}
+
+.borderBox7 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  top: 6%;
+  right: 6%;
+}
+
+.borderBox8 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  bottom: 0;
+  left: 6%;
+}
+
+.borderBox9 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  top: 6%;
+  right: 6%;
+}
+
+.borderBox10 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  bottom: 0;
+  left: 6%;
+}
+
+.illustrationLink {
+  font-family: Oswald, helvetica, sans-serif;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  background: linear-gradient(to right, #DCBA19 50%, white 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 700ms ease;
+  position: relative;
+  flex: 0 0 33.333%;
+}
+
+.illustrationLink:hover {
+  background-position: 0 100%;
+  /* transition-delay: 0.1s; --> SKAL BRUGES TIL BORDERANIMATION */
+}
+
+.animationLink {
+  font-family: Oswald, helvetica, sans-serif;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  background: linear-gradient(to right, #DCBA19 50%, white 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 500ms ease;
+  position: relative;
+  flex: 0 0 33.333%;
+}
+
+.animationLink:hover {
+  background-position: 0 100%;
+  /* transition-delay: 0.1s; --> SKAL BRUGES TIL BORDERANIMATION */
+}
+
+.webdesignLink {
+  font-family: Oswald, helvetica, sans-serif;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  background: linear-gradient(to right, #DCBA19 50%, white 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 670ms ease;
+  position: relative;
+  flex: 0 0 33.333%;
+}
+
+.webdesignLink:hover {
+  background-position: 0 100%;
+  /* transition-delay: 0.1s; --> SKAL BRUGES TIL BORDERANIMATION */
+}
+
+.videoproduktionLink {
+  font-family: Oswald, helvetica, sans-serif;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  background: linear-gradient(to right, #DCBA19 50%, white 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 670ms ease;
+  position: relative;
+  flex: 0 0 33.333%;
+}
+
+.videoproduktionLink:hover {
+  background-position: 0 100%;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topBorderBox{
+  width: 30%;
+  border-top: solid white 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 0px;
+}
+
+.someContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.someContainer a {
+  text-decoration: none;
+  transition: background-color .2s ease-out;
+  border-radius: 70px;
+  margin: 15px;
+  background-color: #707070;
+  opacity: 80%;
+}
+
+.someContainer a:hover {
+  background-color: #54A3A7;
+}
+
+.someImgContainer {
+  padding: 10px;
+  position: relative;
+  top: 3px;
+  left: 1px;
+  width: 56px;
+  height: 56px;
+}
+
+.someImgContainer img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+}
+
+.footerLinks p {
+  font-family: Oswald, helvetica, sans-serif;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.kontaktLink {
+  font-family: Oswald, helvetica, sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, #DCBA19 50%, white 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.3s ease;
+}
+
+.kontaktLink:hover {
+  background-position: 0 100%;
+}
+
+.ommigLink {
+  font-family: Oswald, helvetica, sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, #DCBA19 50%, white 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.3s ease;
+}
+
+.ommigLink:hover {
+  background-position: 0 100%;
+}
+
+.footerInfo {
+  display: flex;
+  flex-direction: row;
+  font-family: Oswald, helvetica, sans-serif;
+  justify-content: center;
+}
+
+.footerInfo p {
+  font-size: 12px;
+  padding: 3px;
+}
+
+.footerInfoP {
+  color: #fff;
+  opacity: 50%;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+.lineSymbol {
+  color: #DCBA19;
+}
+
+/* Footer - slut */
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-device-width: 668px) and (max-device-height: 1223px) {
+
+  /* Nav bar */
+
+    .header li a {
+      padding: 20px 5px;
+      color: #fff;
+      display: inline-block;
+      text-decoration: none;
+      background: linear-gradient(to right, #DCBA19 50%, white 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: background-position 670ms ease;
+      position: relative;
+      flex: 0 0 33.333%;
+
+    }
+
+      .header li a:hover {
+        background-position: 0 100%;
+        text-decoration: underline;
+      }
+
+    .header ul {
+      background-color: transparent;
+    }
+
+    .header ul a {
+      outline: 0px;
+    }
+
+    .header ul a:hover {
+      color: #fff;
+      border-left: 0;
+    }
+
+    .header .menu {
+      display: flex;
+      max-height: none;
+      margin-top: 0;
+      background-color: none;
+      justify-content: flex-end;
+    }
+
+    .header .menuIcon {
+      display: none;
+    }
+
+    header ul p {
+      display: block;
+      padding: 20px 5px;
+    }
+
+  /* Nav bar - slut */
+
+/* About */
+
+  .borderContainer {
+    max-width: 65%;
+  }
+  .borderContainer h1 {
+    font-weight: 400;
+    font-size: 45px;
+  }
+
+  /* About - slut */
+
+  /* ------ HOVER ANIMATION - CATEGORY ------ */
+
+  /* Illustration */
+
+    .illustrationLink:hover {
+      transition-delay: 0.1s;
+    }
+
+    .borderBox3 {
+      right: 200%;
+      opacity: 0%;
+      transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .cat:hover .borderBox3 {
+      opacity: 100%;
+      right: 6%;
+    }
+
+    .borderBox4 {
+      left: -200%;
+      opacity: 0%;
+      transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .cat:hover .borderBox4 {
+      opacity: 100%;
+      left: 6%;
+    }
+
+  /* Animation */
+
+    .animationLink:hover {
+      transition-delay: 0.3s;
+    }
+
+    .borderBox5 {
+      right: 300%;
+      opacity: 0%;
+      transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .cat:hover .borderBox5 {
+      right: 6%;
+      opacity: 100%;
+    }
+
+    .borderBox6 {
+      left: -300%;
+      opacity: 0%;
+      transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .cat:hover .borderBox6 {
+      opacity: 100%;
+      left: 6%;
+    }
+  /* Web design */
+
+    .webdesignLink:hover {
+      transition-delay: 0.3s;
+    }
+
+    .borderBox7 {
+      right: 400%;
+      opacity: 0%;
+      transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .cat:hover .borderBox7 {
+      opacity: 100%;
+      right: 6%;
+    }
+
+    .borderBox8 {
+      left: -400%;
+      opacity: 0%;
+      transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .cat:hover .borderBox8 {
+      opacity: 100%;
+      left: 6%;
+    }
+
+  /* Video Editing */
+
+    .videoproduktionLink:hover {
+      transition-delay: 0.3s;
+    }
+
+    .borderBox9 {
+      right: 500%;
+      opacity: 0%;
+      transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .cat:hover .borderBox9 {
+      opacity: 100%;
+      right: 6%;
+    }
+
+    .borderBox10 {
+      left: -500%;
+      opacity: 0%;
+      transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .cat:hover .borderBox10 {
+      opacity: 100%;
+      left: 6%;
+    }
+
+}
+
+/* Desktop Media Query */
+
+@media only screen and (min-device-width: 1224px) {
+
+/* Nav bar */
+
+  .header li {
+    margin-left: 0;
+  }
+
+  .header ul a {
+    outline: 0px;
+  }
+
+  .header li a {
+    padding: 20px 15px;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(to right, #DCBA19 50%, white 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 670ms ease;
+    position: relative;
+    flex: 0 0 33.333%;
+  }
+
+    .header li a:hover {
+      background-position: 0 100%;
+      text-decoration: underline;
+    }
+
+  .header ul {
+    background-color: transparent;
+  }
+
+  .header ul a:hover {
+    color: #fff;
+    border-left: 0;
+  }
+
+  .header .menu {
+    display: flex;
+    max-height: none;
+    margin-top: 0;
+    background-color: none;
+    justify-content: flex-end;
+  }
+
+  .header .menuIcon {
+    display: none;
+  }
+
+  header ul p {
+    display: block;
+    padding: 20px 15px;
+  }
+
+/* Nav bar - slut */
+
+/* About */
+
+  .borderContainer {
+    max-width: 40%;
+  }
+
+  .borderContainer h1 {
+    font-weight: 400;
+    font-size: 45px;
+  }
+
+/* About - slut */
+
+/* ------ HOVER ANIMATION - CATEGORY ------ */
+
+/* Illustration */
+
+  .illustrationLink:hover {
+    transition-delay: 0.1s;
+  }
+
+  .borderBox3 {
+    right: 200%;
+    opacity: 0%;
+    transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  .cat:hover .borderBox3 {
+    opacity: 100%;
+    right: 6%;
+  }
+
+  .borderBox4 {
+    left: -200%;
+    opacity: 0%;
+    transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  .cat:hover .borderBox4 {
+    opacity: 100%;
+    left: 6%;
+  }
+
+/* Animation */
+
+  .animationLink:hover {
+    transition-delay: 0.3s;
+  }
+
+  .borderBox5 {
+    right: 300%;
+    opacity: 0%;
+    transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  .cat:hover .borderBox5 {
+    right: 6%;
+    opacity: 100%;
+  }
+
+  .borderBox6 {
+    left: -300%;
+    opacity: 0%;
+    transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  .cat:hover .borderBox6 {
+    opacity: 100%;
+    left: 6%;
+  }
+/* Web design */
+
+  .webdesignLink:hover {
+    transition-delay: 0.3s;
+  }
+
+  .borderBox7 {
+    right: 400%;
+    opacity: 0%;
+    transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  .cat:hover .borderBox7 {
+    opacity: 100%;
+    right: 6%;
+  }
+
+  .borderBox8 {
+    left: -400%;
+    opacity: 0%;
+    transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  .cat:hover .borderBox8 {
+    opacity: 100%;
+    left: 6%;
+  }
+
+/* Video Editing */
+
+  .videoproduktionLink:hover {
+    transition-delay: 0.3s;
+  }
+
+  .borderBox9 {
+    right: 500%;
+    opacity: 0%;
+    transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  .cat:hover .borderBox9 {
+    opacity: 100%;
+    right: 6%;
+  }
+
+  .borderBox10 {
+    left: -500%;
+    opacity: 0%;
+    transition: 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  .cat:hover .borderBox10 {
+    opacity: 100%;
+    left: 6%;
+  }
+}
+
+/* Desktop Media Query - slut */
